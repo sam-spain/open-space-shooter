@@ -1,0 +1,2 @@
+# open-space-shooter
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ba5949b92c7849c385d1a1acba8cda5d)](https://app.codacy.com/app/sam-spain/open-space-shooter?utm_source=github.com&utm_medium=referral&utm_content=sam-spain/open-space-shooter&utm_campaign=Badge_Grade_Dashboard)
