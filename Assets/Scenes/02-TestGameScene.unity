@@ -231,7 +231,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247812179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bfac8e596c6728468086635583da2ad, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f1c154ca4b036e0b88cdf167829f5a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   shipMotor: {fileID: 1247812182}
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1247812179}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4e97a41c28bc9c47ad761e4a5564bad, type: 3}
+  m_Script: {fileID: 11500000, guid: d788b406566e46672b7c459f579b94f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   baseShipSpeed: 1
