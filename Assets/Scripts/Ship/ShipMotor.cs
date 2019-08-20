@@ -15,7 +15,7 @@ public class ShipMotor : MonoBehaviour
         transform.Translate(Vector3.up * yInput * baseShipSpeed * deltaTime);
     }
 
-    internal void setInput(float xInput, float yInput)
+    internal void SetInput(float xInput, float yInput)
     {
         this.xInput = xInput;
         this.yInput = yInput;
