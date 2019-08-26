@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
 
-[RequireComponent(typeof(ShipMotor))]
+[RequireComponent(typeof(Ship))]
 public class PlayerInput : MonoBehaviour
 {
     [SerializeField]
-    private ShipMotor shipMotor;
+    private Ship ship;
 
     private void Update()
     {
         Movement();
+        Weapons();
     }
 
     private void Movement()
@@ -34,6 +35,6 @@ public class PlayerInput : MonoBehaviour
             xInput = 0;
         }
 
-        shipMotor.SetInput(xInput, yInput);
+        ship.SetInputVector(xInput, yInput);
     }
 }
