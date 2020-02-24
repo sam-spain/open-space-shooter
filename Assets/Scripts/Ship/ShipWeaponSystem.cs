@@ -15,10 +15,10 @@ public class ShipWeaponSystem : MonoBehaviour
     public void FireWeapon() {
         // Do timeout stuff here
         weapons[weaponToFireIndex].Fire();
-        increaseFireIndex();
+        IncreaseFireIndex();
     }
 
-    private void increaseFireIndex() {
+    private void IncreaseFireIndex() {
         weaponToFireIndex++;
         if(weapons.Length <= weaponToFireIndex) {
             weaponToFireIndex = 0;

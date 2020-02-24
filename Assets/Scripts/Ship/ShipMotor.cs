@@ -15,10 +15,10 @@ public class ShipMotor : MonoBehaviour
         transform.Translate(Vector3.up * yInput * baseShipSpeed * deltaTime);
     }
     private void LateUpdate() {
-        clampPosition();
+        ClampPosition();
     }
 
-    private void clampPosition()
+    private void ClampPosition()
     {
         Vector3 position = Camera.main.WorldToViewportPoint(transform.position);
         position.x = Mathf.Clamp(position.x, 0.05F, 0.95F);

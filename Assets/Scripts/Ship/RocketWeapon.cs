@@ -12,7 +12,7 @@ namespace Weapons
 
         [SerializeField]
         private float speed = 10f;
-        private float lifeTime = 0;
+        private float lifeTime;
         private void Update()
         {
             Movement();
@@ -28,7 +28,9 @@ namespace Weapons
         {
             DamageController damageController = other.gameObject.GetComponent<DamageController>();
             if (damageController != null)
-                damageController.takeHit();
+            {
+                damageController.TakeHit();
+            }
         }
     }
 }

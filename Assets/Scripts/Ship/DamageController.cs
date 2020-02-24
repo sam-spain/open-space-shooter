@@ -15,10 +15,10 @@ namespace SpaceObjects
         {
             ship = GetComponent<Ship>();
         }
-        public void takeHit()
+        public void TakeHit()
         {
             Debug.Log("Controller took hit");
-            ship.takeHit();
+            ship.TakeHit();
         }
     }
 }
