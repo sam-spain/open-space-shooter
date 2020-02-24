@@ -34,7 +34,7 @@ namespace SpaceObjects
             }
         }
 
-        internal void takeHit()
+        internal void TakeHit()
         {
             Destroy(this.gameObject);
         }
