@@ -2,18 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ship : MonoBehaviour
+namespace SpaceObjects
 {
-
-    [SerializeField]
-    private ShipMotor shipMotor;
-    public void SetInputVector(float x, float y) 
+    internal class Ship : MonoBehaviour
     {
-        shipMotor.SetInput(x, y);
+
+        [SerializeField]
+        private ShipMotor motor;
+
+        [SerializeField]
+        private ShipWeaponSystem weaponSystem;
+
+        private void Start()
+        {
+            motor = GetComponent<ShipMotor>();
+            weaponSystem = GetComponent<ShipWeaponSystem>();
+        }
+        internal void SetInputVector(float x, float y)
+        {
+            if (motor != null)
+            {
+                motor.SetInput(x, y);
+            }
+        }
+
+        internal void FireWeapons()
+        {
+            if (weaponSystem != null)
+            {
+                weaponSystem.FireWeapon();
+            }
+        }
+
+        internal void takeHit()
+        {
+            Destroy(this.gameObject);
+        }
     }
 
-    public void SetWeaponsInput(bool enabled)
-    {
-        
-    }
 }
