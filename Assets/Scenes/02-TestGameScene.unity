@@ -149,7 +149,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3828448}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.38, y: -0.28, z: -0.000000059605}
+  m_LocalPosition: {x: 1.38, y: -0.28, z: 0}
   m_LocalScale: {x: 0.39917, y: 0.39917, z: 0.39917}
   m_Children:
   - {fileID: 2053376170}
@@ -225,10 +225,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3828448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6171efb18053f7138b8ddaa58b28d10c, type: 3}
+  m_Script: {fileID: 11500000, guid: 86a4738b740b1876eaedce82777e224c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPosition: {fileID: 2053376170}
+  spawnPosition: {fileID: 3828449}
   ammunitionPrefab: {fileID: 8016526234495249335, guid: c0986e3f626ac30d5959deb3ee243fb2,
     type: 3}
 --- !u!1 &244798512
@@ -514,10 +514,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1039279714}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6171efb18053f7138b8ddaa58b28d10c, type: 3}
+  m_Script: {fileID: 11500000, guid: 86a4738b740b1876eaedce82777e224c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPosition: {fileID: 428896570}
+  spawnPosition: {fileID: 1039279715}
   ammunitionPrefab: {fileID: 8016526234495249335, guid: c0986e3f626ac30d5959deb3ee243fb2,
     type: 3}
 --- !u!65 &1039279717
@@ -655,10 +655,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1839173267}
+  - component: {fileID: 1839173268}
   - component: {fileID: 1839173266}
   - component: {fileID: 1839173265}
   - component: {fileID: 1839173264}
-  - component: {fileID: 1839173268}
+  - component: {fileID: 1839173269}
   m_Layer: 0
   m_Name: PlayerShip
   m_TagString: Untagged
@@ -675,10 +676,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839173263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d788b406566e46672b7c459f579b94f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0444637944f893dcc87225c5fed30dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseShipSpeed: 10
 --- !u!114 &1839173265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -688,10 +688,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839173263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f1c154ca4b036e0b88cdf167829f5a2, type: 3}
+  m_Script: {fileID: 11500000, guid: c8a8252c59ecaff9e83802214474caca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ship: {fileID: 1839173266}
+  weaponPlatforms:
+  - {fileID: 3828453}
+  - {fileID: 3828453}
 --- !u!114 &1839173266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,11 +703,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839173263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b0092c404560e309bb44e232756915a, type: 3}
+  m_Script: {fileID: 11500000, guid: d788b406566e46672b7c459f579b94f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motor: {fileID: 0}
-  weaponSystem: {fileID: 0}
+  baseShipSpeed: 10
 --- !u!4 &1839173267
 Transform:
   m_ObjectHideFlags: 0
@@ -730,10 +731,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 1839173263}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8a8252c59ecaff9e83802214474caca, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b0092c404560e309bb44e232756915a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons: []
+  motorService: {fileID: 0}
+  weaponService: {fileID: 0}
+  healthService: {fileID: 0}
+--- !u!114 &1839173269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1839173263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01d1b88d910d0d240ae64998dfd22eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ship: {fileID: 0}
 --- !u!1 &2053376169
 GameObject:
   m_ObjectHideFlags: 0

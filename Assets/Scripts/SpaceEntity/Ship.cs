@@ -4,38 +4,33 @@ using UnityEngine;
 
 namespace SpaceObjects
 {
-    internal class Ship : MonoBehaviour
+    internal class Ship : SpaceEntity
     {
-
-        [SerializeField]
-        private ShipMotor motor;
-
-        [SerializeField]
-        private ShipWeaponSystem weaponSystem;
-
         private void Start()
         {
-            motor = GetComponent<ShipMotor>();
-            weaponSystem = GetComponent<ShipWeaponSystem>();
+            motorService = GetComponent<MotorService>();
+            weaponService = GetComponent<WeaponService>();
+            healthService = GetComponent<HealthService>();
         }
         internal void SetInputVector(float x, float y)
         {
-            if (motor != null)
+            if (motorService != null)
             {
-                motor.SetInput(x, y);
+                motorService.SetInput(x, y);
             }
         }
 
         internal void FireWeapons()
         {
-            if (weaponSystem != null)
+            if (weaponService != null)
             {
-                weaponSystem.FireWeapon();
+                weaponService.FireWeapon();
             }
         }
 
         internal void TakeHit()
         {
+            // Manage taking hits here
             Destroy(this.gameObject);
         }
     }
