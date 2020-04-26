@@ -30,8 +30,10 @@ namespace SpaceObjects
 
         internal void TakeHit()
         {
-            // Manage taking hits here
-            Destroy(this.gameObject);
+            healthService.TakeHit(1F);
+            if(healthService.WasFatalHit()) {
+                Destroy(this.gameObject);
+            }
         }
     }
 
