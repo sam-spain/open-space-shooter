@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 1643345767800184553}
   - component: {fileID: 1643345767800184558}
   - component: {fileID: 1643345767800184551}
+  - component: {fileID: 2411418978496552429}
+  - component: {fileID: 6160491219818329328}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -109,7 +111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0092c404560e309bb44e232756915a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorService: {fileID: 0}
+  motorService: {fileID: 6160491219818329328}
   weaponService: {fileID: 0}
   healthService: {fileID: 1643345767800184553}
 --- !u!114 &1643345767800184553
@@ -154,3 +156,29 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2411418978496552429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643345767800184559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b12f25ced492ac2cbad4997ad3518f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {x: 0, y: 0, z: 0}
+--- !u!114 &6160491219818329328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1643345767800184559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d788b406566e46672b7c459f579b94f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseShipSpeed: 5

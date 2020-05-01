@@ -16,10 +16,12 @@ namespace SpaceObjects
         {
             transform.Translate(Vector3.right * xInput * baseShipSpeed * deltaTime);
             transform.Translate(Vector3.up * yInput * baseShipSpeed * deltaTime);
+            xInput = 0;
+            yInput = 0;
         }
         private void LateUpdate()
         {
-            ClampPosition();
+            // TODO: Move this to component only for player ClampPosition();
         }
 
         private void ClampPosition()
