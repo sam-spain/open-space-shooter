@@ -14,21 +14,21 @@ namespace SpaceObjects
         // Start is called before the first frame update
         void Start()
         {
-            makeTarget();
+            MakeTarget();
             ship = GetComponent<Ship>();
         }
 
-        internal void makeTarget()
+        internal void MakeTarget()
         {
             target = new Vector3(transform.position.x, transform.position.y - 20f, transform.position.z);
         }
 
         void Update()
         {
-            moveTowardsTarget();
+            MoveTowardsTarget();
         }
 
-        internal void moveTowardsTarget()
+        internal void MoveTowardsTarget()
         {
             Vector3 heading = target - transform.position;
             float distance = heading.magnitude;

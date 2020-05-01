@@ -21,7 +21,7 @@ namespace SpaceObjects
         }
         private void LateUpdate()
         {
-            // TODO: Move this to component only for player ClampPosition();
+            // TODO: Use ClampPosition in player specific component
         }
 
         private void ClampPosition()

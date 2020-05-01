@@ -12,7 +12,7 @@ namespace SpaceObjects
 
         [SerializeField]
         private float spawnRate = 1F;
-        private float spawnCounter = 0F;
+        private float spawnCounter;
         private void Start()
         {
             spawnPoints = GetComponentsInChildren<SpawnPoint>();
