@@ -8,6 +8,10 @@ namespace SpaceObjects
         [SerializeField]
         private Ship ship;
 
+        private void Start() {
+            ship = GetComponent<Ship>();
+        }
+
         private void Update()
         {
             HandleMovementInput();

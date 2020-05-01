@@ -17,7 +17,6 @@ namespace SpaceObjects
         }
         public void TakeHit()
         {
-            Debug.Log("Controller took hit");
             ship.TakeHit();
         }
     }
